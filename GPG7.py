@@ -15,7 +15,7 @@ def user_input_features():
   gender = st.sidebar.slider('Gender', female, male)
   data = {'year': year,'gender': gender}
   features = pd.DataFrame(data, index=[0])
-    return features
+  return features
 
 df = user_input_features()
 
