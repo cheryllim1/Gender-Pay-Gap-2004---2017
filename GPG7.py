@@ -23,6 +23,10 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
+Pay = pd.read_csv('https://raw.githubusercontent.com/cheryllim1/Gender-Pay-Gap-2004---2017/main/earning.csv')
+X = Pay.drop('pay',axis = 1)
+Y = Gender['gender']
+
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
